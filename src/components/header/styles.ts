@@ -4,7 +4,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 32px 160px;
+  padding: 2rem 10rem;
 `
 
 export const CompanyLogo = styled.img``
@@ -23,8 +23,11 @@ export const Cart = styled.div`
 `
 
 export const CartIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 6px;
-  padding: 8px;
+  padding: 0.5rem;
   background-color: ${(props) => props.theme['yellow-light']};
   color: ${(props) => props.theme['yellow-dark']};
 `
@@ -51,7 +54,7 @@ export const LocationCard = styled.div`
   display: flex;
   align-items: center;
   border-radius: 6px;
-  padding: 8px;
+  padding: 0.5rem;
   background: ${(props) => props.theme['purple-light']};
   color: ${(props) => props.theme['purple-dark']};
 `
