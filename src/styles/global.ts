@@ -17,5 +17,6 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 130%;
+    color: ${(props) => props.theme['base-text']};
   }
 `
