@@ -1,10 +1,6 @@
-import { Minus, Plus, ShoppingCart } from 'phosphor-react'
 import {
-  CoffeAmount,
   CoffeBuy,
-  CoffeBuyActions,
   CoffeCard,
-  CoffeCartIncon,
   CoffeDescription,
   CoffeImage,
   CoffeListContainer,
@@ -16,6 +12,8 @@ import {
 } from './styles'
 
 import { coffeData } from '../../../../assets/coffe_data'
+import { CoffeBuyActions } from '../CoffeBuyActions'
+
 const IMG_DIR = '/src/assets/coffes/'
 
 export function CoffeList() {
@@ -28,7 +26,7 @@ export function CoffeList() {
         {coffeData.map((coffe) => (
           <CoffeCard key={coffe.id}>
             <CoffeImage>
-              <img src={IMG_DIR + coffe.image} />
+              <img src={IMG_DIR + coffe.image} alt={coffe.name} />
             </CoffeImage>
 
             <CoffeTags>
@@ -47,20 +45,7 @@ export function CoffeList() {
                 <span>R$ </span>
                 <span>{coffe.price}</span>
               </CoffePrice>
-              <CoffeBuyActions>
-                <CoffeAmount>
-                  <button>
-                    <Minus size={16} />
-                  </button>
-                  <span>{0}</span>
-                  <button>
-                    <Plus size={16} />
-                  </button>
-                </CoffeAmount>
-                <CoffeCartIncon>
-                  <ShoppingCart size={24} weight="fill" />
-                </CoffeCartIncon>
-              </CoffeBuyActions>
+              <CoffeBuyActions coffeId={coffe.id.toString()} />
             </CoffeBuy>
           </CoffeCard>
         ))}
